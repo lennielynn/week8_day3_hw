@@ -57,7 +57,7 @@ function removeInventoryItem(character: RPGCharacter, itemID: string):void{
 
 function printInventory(character: RPGCharacter ):void {
     character.inventory.forEach(item => {
-        console.log(`${item.name}`)
+        console.log(item.name)
     })
 }
 
@@ -71,7 +71,7 @@ function inventoryValue(character: RPGCharacter):number {
 
 const character = createCharacter('Raul', 'Archer', 'ranged', [])
 
-console.log(character)
+// console.log(character)
 
 const sword = createInventoryItem('Sword','Iron sword with leather grip', 40, 50, undefined)
 const club = createInventoryItem('Club','Wooden Club', 20, 25, undefined )
@@ -83,14 +83,19 @@ const bow = createInventoryItem('Bow','Wooden Bow', 30, 40, undefined)
 addInventoryItem(character, sword)
 addInventoryItem(character, club)
 addInventoryItem(character, bow)
+addInventoryItem(character, bow)
 
-console.log(character.inventory, 'before del')
-
-
-removeInventoryItem(character, club.id)
-
-console.log(character.inventory, 'after del')
 
 console.log(inventoryValue(character))
 
-printInventory(character)
+// console.log('printInventory')
+// console.log(printInventory(character))
+
+
+// console.log(character.inventory, 'before del')
+// removeInventoryItem(character, club.id)
+// console.log(character.inventory, 'after del')
+
+// console.log(inventoryValue(character))
+
+// console.log`Your character, ${character.name}, Has ${character.inventory} in their inventory`
